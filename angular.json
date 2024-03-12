@@ -30,15 +30,21 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.less"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            }
+            },
+            "externalDependencies": [
+              ""
+            ]
           },
           "configurations": {
             "production": {
@@ -74,7 +80,10 @@
               "buildTarget": "crunchy-search:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "proxyConfig": "src/proxy.conf.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
