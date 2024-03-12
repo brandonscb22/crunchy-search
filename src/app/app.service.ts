@@ -21,7 +21,8 @@ export class AppService {
           'etp-anonymous-id': 'a031d6d4-ee7d-4c48-b51c-fbf0182f0481',
           'origin': 'https://www.crunchyroll.com',
           'referer': 'https://www.crunchyroll.com/es/videos/alphabetical',
-          'Access-Control-Allow-Origin': '*'
+          'Access-Control-Allow-Origin': 'https://crunchy-search.vercel.app',
+          'Access-Control-Allow-Methods': 'PUT, GET, HEAD, POST, DELETE, OPTIONS'
         }
       })
   }
@@ -39,7 +40,8 @@ export class AppService {
           'etp-anonymous-id': 'a031d6d4-ee7d-4c48-b51c-fbf0182f0481',
           'origin': 'https://www.crunchyroll.com',
           'referer': 'https://www.crunchyroll.com/es/videos/alphabetical',
-          'Access-Control-Allow-Origin': '*'
+          'Access-Control-Allow-Origin': 'https://crunchy-search.vercel.app',
+          'Access-Control-Allow-Methods': 'PUT, GET, HEAD, POST, DELETE, OPTIONS'
         }
       })
   }
