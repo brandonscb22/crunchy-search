@@ -9,7 +9,7 @@ export class AppService {
   constructor(private httpClient: HttpClient) { }
 
   getToken() {
-    return this.httpClient.post('/api/auth/v1/token', 'grant_type=client_id',
+    return this.httpClient.post('https://www.crunchyroll.com/auth/v1/token', 'grant_type=client_id',
       {
         headers: {
           'authority': 'www.crunchyroll.com',
@@ -27,7 +27,7 @@ export class AppService {
   }
 
   getPaginates(start: number = 0, token: string, n: number = 50) {
-    return this.httpClient.get(`/api/content/v2/discover/browse?start=${start}&n=${n}&sort_by=alphabetical&ratings=true&locale=es-419`,
+    return this.httpClient.get(`https://www.crunchyroll.com/content/v2/discover/browse?start=${start}&n=${n}&sort_by=alphabetical&ratings=true&locale=es-419`,
       {
         headers: {
           'authority': 'www.crunchyroll.com',
